@@ -15,10 +15,15 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
+
+## Sector Overview & Market Dynamics
+
+The global Managed DNS and Cloud Network Infrastructure market is valued at approximately **$2.1 billion in 2026** (expanding within a broader **$16+ billion** enterprise DDI market) and growing at an ~18–22% CAGR driven by edge compute, Anycast routing, and Zero Trust security. The sector is **moderately concentrated to oligopolistic** at the hyperscale edge—dominated by a handful of mega-cap cloud providers (AWS, Microsoft, Google) and specialized edge/CDN titans (Cloudflare, Akamai)—while remaining fragmented across niche enterprise traffic management, hybrid private DDI appliances, and open-source self-hosted implementations.
 
 ## SaaS/Hosted Platforms
 
