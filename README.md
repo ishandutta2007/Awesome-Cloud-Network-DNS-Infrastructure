@@ -1,6 +1,6 @@
 # Awesome-Cloud-Network-DNS-Infrastructure
 
-# Top Cloud Network & DNS Infrastructure Ecosystem
+## Top Cloud Network & DNS Infrastructure Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Authoritative DNS, Global Traffic Management & Edge Network Services*  
