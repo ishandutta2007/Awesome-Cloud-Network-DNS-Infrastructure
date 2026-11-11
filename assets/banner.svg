@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d18" />
+      <stop offset="50%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#060913" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      fill: #94a3b8;
+    }
+    .badge-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Dynamic Network Pulses */
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(0.98); }
+      50% { opacity: 0.7; transform: scale(1.02); }
+    }
+    @keyframes floatOrb1 {
+      0% { transform: translate(0px, 0px); }
+      50% { transform: translate(30px, -20px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0px, 0px); }
+      50% { transform: translate(-30px, 25px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -120;
+      }
+    }
+    @keyframes pingDot {
+      0% { r: 3; opacity: 1; }
+      100% { r: 12; opacity: 0; }
+    }
+
+    .orb-1 { animation: floatOrb1 12s ease-in-out infinite; }
+    .orb-2 { animation: floatOrb2 14s ease-in-out infinite; }
+    .pulse-net { animation: pulse 6s ease-in-out infinite; transform-origin: center; }
+    .data-stream { stroke-dasharray: 8 12; animation: dash 4s linear infinite; }
+    .data-stream-fast { stroke-dasharray: 6 10; animation: dash 2.5s linear infinite; }
+    .ping-circle { animation: pingDot 2s cubic-bezier(0, 0.2, 0.8, 1) infinite; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+  <rect width="1200" height="400" fill="url(#grid)" />
+
+  <!-- Dynamic Ambient Glowing Orbs in Background -->
+  <g class="orb-1" filter="url(#softGlow)">
+    <circle cx="200" cy="80" r="120" fill="#38bdf8" opacity="0.12" />
+  </g>
+  <g class="orb-2" filter="url(#softGlow)">
+    <circle cx="1000" cy="320" r="140" fill="#a855f7" opacity="0.14" />
+  </g>
+  <g class="orb-1" filter="url(#softGlow)">
+    <circle cx="950" cy="90" r="90" fill="#6366f1" opacity="0.15" />
+  </g>
+
+  <!-- Network Constellation / Data Flows (Lower Layer Behind Text) -->
+  <g opacity="0.45" class="pulse-net">
+    <!-- Connecting network lines -->
+    <path d="M 150,300 Q 300,340 450,290 T 750,320 T 1050,280" fill="none" stroke="#38bdf8" stroke-width="1.5" class="data-stream" />
+    <path d="M 100,100 Q 350,60 600,110 T 1100,70" fill="none" stroke="#818cf8" stroke-width="1.2" class="data-stream-fast" />
+    <path d="M 850,50 L 950,150 L 1080,120 L 1120,240" fill="none" stroke="#c084fc" stroke-width="1" stroke-dasharray="4 6" />
+    <path d="M 80,260 L 160,200 L 240,240" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 6" />
+
+    <!-- Network Nodes -->
+    <circle cx="850" cy="50" r="4" fill="#38bdf8" />
+    <circle cx="950" cy="150" r="5" fill="#818cf8" />
+    <circle cx="1080" cy="120" r="4" fill="#c084fc" />
+    <circle cx="1120" cy="240" r="5" fill="#38bdf8" />
+    <circle cx="160" cy="200" r="4" fill="#38bdf8" />
+    <circle cx="240" cy="240" r="4" fill="#818cf8" />
+
+    <!-- Animated Pingers at Key Routing Hubs -->
+    <circle cx="950" cy="150" r="4" fill="none" stroke="#818cf8" stroke-width="2" class="ping-circle" />
+    <circle cx="160" cy="200" r="4" fill="none" stroke="#38bdf8" stroke-width="2" class="ping-circle" />
+  </g>
+
+  <!-- Top Category Tag -->
+  <g transform="translate(600, 75)">
+    <rect x="-145" y="-16" width="290" height="32" rx="16" fill="rgba(56, 189, 248, 0.08)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1" />
+    <circle cx="-120" cy="0" r="4" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="-106" y="5" fill="#38bdf8" class="badge-label">ENTERPRISE CLOUD ARCHITECTURE</text>
+  </g>
+
+  <!-- Main Title (Foreground with Clear Backing for High Contrast) -->
+  <rect x="100" y="105" width="1000" height="155" rx="20" fill="rgba(10, 14, 26, 0.65)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+  <g transform="translate(600, 160)">
+    <!-- Crisp Foreground Text -->
+    <text x="0" y="0" text-anchor="middle" fill="url(#primaryGrad)" class="title-text" filter="url(#glow)">Cloud Network &amp; DNS Infrastructure</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(600, 215)">
+    <text x="0" y="0" text-anchor="middle" class="subtitle-text">Curated Ecosystem of Authoritative DNS, Anycast GSLB &amp; Edge Network Services</text>
+  </g>
+
+  <!-- Feature Metric Badges in lower foreground -->
+  <g transform="translate(250, 305)">
+    <rect x="-85" y="-18" width="170" height="36" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1" />
+    <circle cx="-65" cy="0" r="4" fill="#38bdf8" />
+    <text x="-50" y="5" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13">Authoritative DNS</text>
+  </g>
+
+  <g transform="translate(480, 305)">
+    <rect x="-85" y="-18" width="170" height="36" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(129, 140, 248, 0.25)" stroke-width="1" />
+    <circle cx="-65" cy="0" r="4" fill="#818cf8" />
+    <text x="-50" y="5" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13">Global Traffic (GSLB)</text>
+  </g>
+
+  <g transform="translate(710, 305)">
+    <rect x="-85" y="-18" width="170" height="36" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1" />
+    <circle cx="-65" cy="0" r="4" fill="#c084fc" />
+    <text x="-50" y="5" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13">DNSSEC &amp; DDoS Shield</text>
+  </g>
+
+  <g transform="translate(940, 305)">
+    <rect x="-85" y="-18" width="170" height="36" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(34, 197, 94, 0.25)" stroke-width="1" />
+    <circle cx="-65" cy="0" r="4" fill="#22c55e" />
+    <text x="-50" y="5" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13">Open-Source Engines</text>
+  </g>
+
+  <!-- Border Accent Lines -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#primaryGrad)" />
+  <rect x="0" y="397" width="1200" height="3" fill="url(#primaryGrad)" />
+</svg>
