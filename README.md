@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure?style=flat-square&color=gold" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure?style=flat-square&color=gold" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure?style=flat-square&color=blue" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure?style=flat-square&color=red" alt="GitHub Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Cloud-Network-DNS-Infrastructure/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.style=flat-square" alt="License" /></a>
@@ -59,7 +59,7 @@ The sector exhibits **moderate concentration / oligopolistic tendencies** at the
 
 Curated collection of the most trusted open-source DNS resolvers, authoritative nameservers, and GitOps DNS orchestration engines:
 
-| 📦 Project | ⭐ Star Badge | 📝 Description |
+| 📦 Project | ⭐ Stars_Badge | 📝 Description |
 |:---|:---|:---|
 | **[Pi-hole](https://github.com/pi-hole/pi-hole)** | [![Stars](https://img.shields.io/github/stars/pi-hole/pi-hole?style=social&color=white)](https://github.com/pi-hole/pi-hole/stargazers) | Network-wide ad blocking and private sinkhole DNS server providing local caching, DHCP, and privacy-focused DNS control. |
 | **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** | [![Stars](https://img.shields.io/github/stars/AdguardTeam/AdGuardHome?style=social&color=white)](https://github.com/AdguardTeam/AdGuardHome/stargazers) | Network-wide ads, trackers, and malware-blocking DNS server with native support for DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), and DNS-over-QUIC (DoQ). |
